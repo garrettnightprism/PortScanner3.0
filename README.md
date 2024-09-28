@@ -1,72 +1,22 @@
-PortScanner3.0
-Unleash the power of lightning-fast port scanning with PortScanner3.0! This Python-powered tool is engineered for network reconnaissance—deeper, faster, and smarter than ever. Say goodbye to ordinary scanners that choke on firewalls. PortScanner3.0 exposes open ports and reveals hidden services like no other.
+PortScanner3.0 — Unleashing the Next Level of Network Reconnaissance
+PortScanner3.0 is your lightweight, yet incredibly powerful Python tool designed to scan open ports across single or multiple targets. Built with precision and speed in mind, this script is perfect for anyone who needs to map network defenses in real-time. And don’t get comfortable—it’s only getting better from here. Future versions are planned to rival Nmap, with advanced techniques that push port scanning to the next level.
 
-🚀 Features
-Blazing Fast Multithreaded Scanning: Scans multiple ports simultaneously for surgical precision.
-Multi-Target Capability: Scan one or more IP addresses—because why limit yourself?
-Extensive Port Coverage: Customize your scan range to fit your mission, from the most common ports to the obscure.
-Service Detection: Maps open ports to common services, helping you identify what's running.
-Real-Time Logging: Automatically logs scan results with timestamps for later analysis.
-🛠 Requirements
+Requirements
+To run this script, you need the following:
+
 Python 3.x
-Socket Library (included with Python by default)
-termcolor (install via pip install termcolor)
-📝 Usage
-Run the script from the command line:
+The socket library (included with Python by default)
+termcolor for colored terminal output (install via pip install termcolor)
+Usage
+Execute the script directly from the command line:
+
+bash
 python port_scanner.py
 
-Enter Targets: Single or multiple IP addresses, e.g., 192.168.0.1 or 192.168.0.1, 8.8.8.8, 10.0.0.1.
-Enter Number of Ports to Scan: Specify the number of ports to scan, starting from port 1. For example, entering 1000 scans ports 1-1000.
+The script will prompt you for the following:
 
-🔥 Example:
-python port_scanner.py
-[*] Enter Targets To Scan (split by ,): 192.168.0.1, 8.8.8.8
-[*] Enter How Many Ports You Want To Scan: 1000
+Targets: You can input a single target or multiple targets separated by commas, like so:
 
-PortScanner3.0 will reveal open ports and the associated services in real-time:
-[+] Port 22 (SSH) is open on 192.168.0.1
-[+] Port 80 (HTTP) is open on 8.8.8.8
-🌐 Future Functionality
-Our goal is to build the next Nmap on steroids:
-
-Advanced OS Fingerprinting: Identify the operating system behind the IP.
-Service Version Detection: Find out what version of services are running.
-Stealth Scanning: Evade firewalls and intrusion detection systems.
-Cloudflare Bypass Strategies: Map networks protected by services like Cloudflare.
-⚠️ Disclaimer
-PortScanner3.0 is for educational and authorized use only. Unauthorized scanning of networks is illegal. Always obtain permission before scanning any system.
-
-Code Overview
-Key features of PortScanner3.0 include:
-
-Multithreaded Scanning: Significantly reduces scan time by utilizing threading.
-Service Detection: Identifies services running on open ports using a list of common ports.
-Logging: Automatically logs scan results to a file with timestamps.
-User-Friendly Input: Simple prompts for target IPs and port range make it easy to customize scans.
-
-Code Snippet:
-import socket
-import termcolor
-import threading
-import time
-
-PORT_DESCRIPTIONS = {
-    20: "FTP Data Transfer", 21: "FTP Command Control", 22: "SSH",
-    23: "Telnet", 25: "SMTP", 53: "DNS", 80: "HTTP", 443: "HTTPS",
-    3389: "RDP", 3306: "MySQL", 8080: "HTTP Proxy", 8443: "HTTPS Alt"
-}
-
-def scan_port(ipaddress, port, log_file):
-    try:
-        sock = socket.socket()
-        sock.settimeout(3)
-        sock.connect((ipaddress, port))
-        service = PORT_DESCRIPTIONS.get(port, "Unknown Service")
-        result_message = f"[+] Port {port} ({service}) is open on {ipaddress}"
-        print(termcolor.colored(result_message, 'green'))
-        with open(log_file, 'a') as f:
-            f.write(result_message + "\n")
-        sock.close()
-    except:
-        pass
-Feel free to dive into the code, adapt it, and contribute!
+Single target: 192.168.0.1
+Multiple targets: 192.168.0.1, 8.8.8.8, 10.0.0.1
+Number of Ports to Scan: Input the number of ports to scan, and it will scan ports from 1 to the specified number.
