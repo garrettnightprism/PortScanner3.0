@@ -24,7 +24,9 @@ Run the script from the command line:
 python port_scanner.py
 - Enter Targets: Single or multiple IP addresses, e.g., 192.168.0.1 or 192.168.0.1, 8.8.8.8, 10.0.0.1.
 - Enter Number of Ports to Scan: Specify the number of ports to scan, starting from port 1. For example, entering 1000 scans ports 1-1000.
+
 🔥 Example
+
 python port_scanner.py
 [*] Enter Targets To Scan (split by ,): 192.168.0.1, 8.8.8.8
 [*] Enter How Many Ports You Want To Scan: 1000
@@ -34,13 +36,16 @@ PortScanner3.0 will reveal open ports and the associated services in real-time:
 [+] Port 80 (HTTP) is open on 8.8.8.8
 
 🌐 Future Functionality
+
 Our goal is to build the next Nmap on steroids:
 
 Advanced OS Fingerprinting: Identify the operating system behind the IP.
 Service Version Detection: Find out what version of services are running.
 Stealth Scanning: Evade firewalls and intrusion detection systems.
 Cloudflare Bypass Strategies: Map networks protected by services like Cloudflare.
+
 ⚠️ Disclaimer
+
 PortScanner3.0 is for educational and authorized use only. Unauthorized scanning of networks is illegal. Always obtain permission before scanning any system.
 
 
