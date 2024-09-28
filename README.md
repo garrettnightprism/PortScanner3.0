@@ -22,8 +22,8 @@ Run the script from the command line:
 
 ```bash
 python port_scanner.py
-- Enter Targets: Single or multiple IP addresses, e.g., 192.168.0.1 or 192.168.0.1, 8.8.8.8, 10.0.0.1.
-- Enter Number of Ports to Scan: Specify the number of ports to scan, starting from port 1. For example, entering 1000 scans ports 1-1000.
+Enter Targets: Single or multiple IP addresses, e.g., 192.168.0.1 or 192.168.0.1, 8.8.8.8, 10.0.0.1.
+Enter Number of Ports to Scan: Specify the number of ports to scan, starting from port 1. For example, entering 1000 scans ports 1-1000.
 
 🔥 Example
 
