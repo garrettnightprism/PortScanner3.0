@@ -46,7 +46,7 @@ Cloudflare Bypass Strategies: Map networks protected by services like Cloudflare
 
 ⚠️ Disclaimer
 
-PortScanner3.0 is for educational and authorized use only. Unauthorized scanning of networks is illegal. Always obtain permission before scanning any system.
+Unauthorized scanning of networks is illegal. Always obtain permission before scanning any system. 
 
 
 
